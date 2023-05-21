@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Frontend Mentor | Product preview card component</title>
+  </head>
+  <body>
+    <main>
+      <div class="center-grid bg-white">
+        <div id="information-image">
+          <picture id="perfume-image">
+            <source
+              media="(min-width: 35em)"
+              srcset="images/image-product-desktop.jpg"
+            />
+            <img
+              src="images/image-product-mobile.jpg"
+              alt="the Perfume, Gabrielle Essence Eau De Parfum"
+            />
+          </picture>
+        </div>
+        <div class="information">
+          <div>
+            <h3
+              class="fs-400 text-grey ff-sans uppercase letter-spacing-1 logo"
+            >
+              Perfume
+            </h3>
+            <h1 class="fs-700 text-dark ff-serif">
+              Gabrielle Essence Eau De Parfum
+            </h1>
+          </div>
+          <p class="fs-400 text-grey ff-sans">
+            A floral, solar and voluptuous interpretation composed by Oliver
+            Polge, Perfumer-Creator for the House of
+            <span class="uppercase">chanel</span>.
+          </p>
+          <p
+            class="fs-700 text-accent ff-serif"
+            id="price-perfume"
+            style="line-height: 0.625"
+            ;
+          >
+            $149.99
+            <span
+              class="fs-300 text-grey ff-sans"
+              style="text-decoration: line-through"
+              >$169.99</span
+            >
+          </p>
+          <button class="add-to-cart text-white ff-sans">
+            <img src="/images/icon-cart.svg" alt="shopping cart" />
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

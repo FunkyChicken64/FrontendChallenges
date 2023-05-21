@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="./assets/index.css" />
+    <script src="data.json"></script>
+    <script src="javascript.js" defer></script>
+
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <main>
+      <div class="main-container flex bg-white">
+        <div class="result-container text-white">
+          <h2 class="text-purple-blue fs-400 fw-700">Your Result</h2>
+          <div>
+            <div class="circle">
+              <p class="fs-800 fw-800">
+                76<span class="text-purple-blue fs-300 d-block">of 100</span>
+              </p>
+            </div>
+          </div>
+          <p class="fs-300 text-purple-blue">
+            <span class="fw-700 fs-600 d-block text-white">Great</span>
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+        <div class="summary-container fs-300">
+          <h3 class="fw-800">Summary</h3>
+
+          <div class="bg-red">
+            <div class="flex" style="--gap: 0.5rem">
+              <img
+                src="assets/images/icon-reaction.svg"
+                alt="cartoon outline lighting bolt"
+              />
+              <p class="text-red">Reaction</p>
+            </div>
+            <p class="summary-rating"><span>--</span> / 100</p>
+          </div>
+
+          <div class="bg-yellow">
+            <div class="flex" style="--gap: 0.5rem">
+              <img
+                src="assets/images/icon-memory.svg"
+                alt="cartoon outline of brain"
+              />
+              <p class="text-yellow">Memory</p>
+            </div>
+            <p class="summary-rating"><span>92</span> / 100</p>
+          </div>
+
+          <div class="bg-green">
+            <div class="flex" style="--gap: 0.5rem">
+              <img
+                src="assets/images/icon-verbal.svg"
+                alt="cartoon outline of speech bubble"
+              />
+              <p class="text-green">Verbal</p>
+            </div>
+            <p class="summary-rating"><span>--</span> / 100</p>
+          </div>
+
+          <div class="bg-blue">
+            <div class="flex" style="--gap: 0.5rem">
+              <img
+                src="assets/images/icon-visual.svg"
+                alt="cartoon outline of an eye"
+              />
+              <p class="text-blue">Visual</p>
+            </div>
+
+            <p class="summary-rating"><span>72</span> / 100</p>
+          </div>
+          <button class="continue-button">Continue</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,266 @@
+:root {
+  /* ### colors */
+  /* primary */
+  --clr-preset-blue: 228 45% 44%;
+  --clr-dark-cyan: 158, 36%, 37%;
+  --clr-darker-cyan: 158, 36%, 20%;
+  --clr-cream: 30, 38%, 92%;
+
+  /* neutral */
+
+  --clr-very-dark-blue: 212, 21%, 14%;
+  --clr-dark-grayish-blue: 228, 12%, 48%;
+  --clr-white: 0, 0%, 100%;
+
+  /* font-size */
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 2rem;
+  --fs-600: 1.125rem;
+  --fs-500: 1rem;
+  --fs-400: 0.875rem;
+  --fs-300: 0.75rem;
+  --fs-200: 0.625rem;
+
+  /* font-families */
+  --ff-serif: "Fraunces";
+  --ff-sans: "Montserrat";
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+  }
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-400);
+  background-color: hsl(var(--clr-cream));
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  margin: 1rem auto;
+  padding: 2rem;
+  padding-top: 8rem;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+.bg-cream {
+  background-color: hsl(var(--clr-cream));
+}
+.bg-accent {
+  background-color: hsl(var(--clr-dark-cyan));
+}
+
+.text-dark {
+  color: black;
+}
+
+.text-grey {
+  color: hsl(var(--clr-dark-grayish-blue));
+}
+
+.text-white {
+  color: hsl(var(--clr-white));
+}
+
+.text-accent {
+  color: hsl(var(--clr-dark-cyan));
+}
+
+.ff-serif {
+  font-family: var(--ff-serif);
+}
+
+.ff-sans {
+  font-family: var(--ff-sans);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-900 {
+  font-size: var(--fs-900);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+
+.add-to-cart {
+  background-color: hsl(var(--clr-dark-cyan));
+  border: none;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  border-radius: 10px;
+}
+
+.add-to-cart:hover {
+  background-color: hsl(var(--clr-darker-cyan));
+  cursor: pointer;
+}
+
+/* ----------------------------- */
+/* Layout                        */
+/* ----------------------------- */
+
+.center-grid {
+  overflow: hidden;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  width: 680px;
+}
+
+/* ----------------------------- */
+/* Page specific background      */
+/* ----------------------------- */
+
+#information-image {
+  overflow: hidden;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 170px;
+  display: block;
+}
+
+.information {
+  row-gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 2em;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Desktop */
+
+@media (min-width: 35em) {
+  .center-grid {
+    flex-direction: row;
+  }
+
+  #information-image {
+    flex-basis: 50%;
+    display: flex;
+  }
+
+  .information {
+    row-gap: 1rem;
+    flex-basis: 50%;
+  }
+}
