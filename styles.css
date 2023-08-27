@@ -1,0 +1,279 @@
+:root {
+  /* ### colors */
+  /* primary */
+  --clr-red: 0 78% 62%;
+  --clr-cyan: 180 62% 55%;
+  --clr-orange: 34 97% 64%;
+  --clr-blue: 212 86% 64%;
+
+  /* #### Gradient */
+
+  --clr-soft-violet: 273 75% 66%;
+  --clr-soft-blue: 240 73% 65%;
+
+  /* ### Neutral */
+  --clr-dark-blue: 234 12% 34%;
+  --clr-grey-blue: 229 6% 66%;
+  --clr-grey-light: 0 0% 98%;
+
+  /* #### Dividers */
+
+  /* font-size */
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.75rem;
+  --fs-600: 1.25rem;
+  --fs-500: 1rem;
+  --fs-400: 0.875rem;
+  --fs-300: 0.75rem;
+  --fs-200: 0.625rem;
+
+  /* font-families */
+  --ff-sans: "Poppins";
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+  }
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  background-color: hsl(var(--clr-cream));
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  padding: 2rem;
+  padding-top: 2rem;
+}
+
+img,
+picture {
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+.text-red {
+  color: hsl(var(--clr-red));
+  border-color: hsl(var(--clr-red));
+}
+
+.text-orange {
+  color: hsl(var(--clr-orange));
+}
+
+.text-cyan {
+  color: hsl(var(--clr-cyan));
+}
+
+.text-blue {
+  color: hsl(var(--clr-blue));
+}
+
+.text--grey-blue {
+  color: hsl(var(--clr-grey-blue));
+}
+
+.text-grey-light {
+  color: hsl(var(--clr-grey-light));
+}
+
+.text-dark-blue {
+  color: hsl(var(--clr-dark-blue));
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-900 {
+  font-size: var(--fs-900);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+
+.flex {
+  display: flex;
+}
+
+/* ------------------- */
+/* Components         */
+/* ------------------- */
+
+.block-bold {
+  display: block;
+  font-weight: 600;
+}
+
+.title {
+  text-align: center;
+  color: hsl(var(--clr-dark-blue));
+}
+
+.title span {
+  margin-top: 1rem;
+}
+
+.title h2 {
+  font-weight: 200;
+  color: hsl(var(--clr-dark-blue));
+}
+
+.title p {
+  margin: 0 auto;
+  margin-top: 1rem;
+  color: hsl(var(--clr-grey-blue));
+
+  text-align: center;
+  width: clamp(10rem, 100%, 30rem);
+}
+
+.card-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1.5rem, 3rem);
+  max-width: 25rem;
+  min-height: 15rem;
+  padding: 1.5rem;
+  box-shadow: 2px 4px 15px hsl(var(--clr-grey-blue) / 0.7);
+  margin-top: 2rem;
+  border-top: 4px solid;
+  border-radius: 8px;
+}
+
+.card > p {
+  color: hsl(var(--clr-grey-blue));
+}
+
+.card > img {
+  max-width: 20%;
+  margin-top: 1.5rem;
+  margin-left: auto;
+}
+
+/* Desktop */
+
+@media (min-width: 60em) {
+  .card-group {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .card {
+    flex: 1 1 0px;
+    min-width: 18rem;
+    margin-top: 0rem;
+    padding: 2rem;
+  }
+
+  .gap > * {
+    margin-block: 2rem;
+  }
+
+  .title > p {
+    margin: 0 auto;
+    margin-top: 2rem;
+    text-align: center;
+    width: 50%;
+  }
+}
