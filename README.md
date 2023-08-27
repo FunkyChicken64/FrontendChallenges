@@ -36,7 +36,6 @@ In my solution, I employed a mobile-first approach, starting with the design for
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-- JavaScript (DOM manipulation)
 
 ### What I learnt
 
