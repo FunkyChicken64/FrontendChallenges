@@ -11,7 +11,6 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learnt](#what-i-learnt)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 
 ## Overview
@@ -23,8 +22,8 @@ In this challenge, the goal was to create an Four card feature section that show
 ### Screenshots of my final project
 
 <span>
-<img src="./images/desktop-complete.png" height=400>
-<img src="./images/mobile-complete.png" height=400>
+<img src="./images/desktop-complete.png" height=300>
+<img src="./images/mobile-complete.png" height=300>
 </span>
 
 ## My process
