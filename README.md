@@ -17,7 +17,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ### The challenge
 
-In this challenge, the goal was to create an Four card feature section that shows users a layout based on their device's screen size.
+In this challenge, the goal was to create an article card, but with a toggable popup share button.
 
 ### Screenshots of my final project
 
@@ -43,7 +43,7 @@ In my solution, I employed a mobile-first approach, starting with the design for
 
 ### What I learnt
 
-Throughout this challenge, I gained experience creating a responsive desing by using a different layout for each device. I also deepened my understanding of CSS customizations.
+Throughout this challenge, I gained experience creating a dynamic pop up button. Starting to get familiar with animations.
 
 ```css
 .popup .show {
