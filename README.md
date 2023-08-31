@@ -22,8 +22,8 @@ In this challenge, the goal was to create an Four card feature section that show
 ### Screenshots of my final project
 
 <span>
-<img src="./images/desktop-complete.png" height=300>
-<img src="./images/mobile-complete.png" height=300>
+<img src="./design/desktop-complete.png" height=300>
+<img src="./design/mobile-complete.png" height=300>
 </span>
 
 ### Link
