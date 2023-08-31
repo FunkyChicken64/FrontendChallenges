@@ -28,7 +28,7 @@ In this challenge, the goal was to create an Four card feature section that show
 
 ### Link
 
-- Live Site URL: [project hosted on Netlify](https://monumental-flan-f6590d.netlify.app/)
+- Live Site URL: [project hosted on Netlify](https://genuine-kelpie-ff4882.netlify.app/)
 
 ## My process
 
