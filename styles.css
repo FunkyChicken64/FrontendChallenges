@@ -1,0 +1,407 @@
+:root {
+  /* ### colors */
+
+  /* ### Neutral */
+  --clr-dark-grey-blue: 217, 19%, 35%;
+  --clr-dark-blue-mellow: 214, 17%, 51%;
+  --clr-grey-blue: 212, 23%, 69%;
+  --clr-grey-light: 210, 46%, 95%;
+
+  /* #### Dividers */
+
+  /* font-size */
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.75rem;
+  --fs-600: 1.625rem;
+  --fs-500: 1.25rem;
+  --fs-400: 0.8125rem;
+  --fs-300: 0.75rem;
+  --fs-200: 0.625rem;
+
+  /* font-families */
+  --ff-sans: "Manrope";
+}
+
+@media (min-width: 65em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.75rem;
+    --fs-500: 1.15rem;
+    --fs-400: 0.825rem;
+  }
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  background-color: hsl(var(--clr-grey-light));
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 100vh;
+  align-items: center;
+  padding-bottom: 10rem;
+  justify-content: center;
+}
+
+img,
+picture {
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+.bg-grey-light {
+  background-color: hsl(var(--clr-grey-light));
+}
+
+.text-grey-blue {
+  color: hsl(var(--clr-grey-blue));
+}
+
+.text-grey-light {
+  color: hsl(var(--clr-grey-light));
+}
+
+.text-dark-grey-blue {
+  color: hsl(var(--clr-dark-grey-blue));
+}
+
+.text-dark-blue {
+  color: hsl(var(--clr-dark-blue-mellow));
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-900 {
+  font-size: var(--fs-900);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+
+.letter-spacing-3 {
+  letter-spacing: 0.65px;
+}
+
+.line-spacing-1 {
+  line-height: 1.75;
+}
+
+.line-spacing-2 {
+  line-height: 1.45;
+}
+
+.flex {
+  display: flex;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* ------------------- */
+/* Components         */
+/* ------------------- */
+
+.main-card {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  max-width: 40rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  margin: 1rem;
+  box-shadow: 1px 4px 12px hsl(var(--clr-dark-grey-blue), 0.2);
+}
+
+.main-card > img {
+  border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
+  max-height: 30vh;
+  background-position: top center;
+}
+
+article {
+  padding: 3rem;
+  padding-bottom: 2rem;
+}
+
+.profile-share {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-name-image {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-profile {
+  border-radius: 50%;
+  width: 3rem;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main-text {
+  line-height: 1.75;
+}
+
+.share-button {
+  background-color: hsl(var(--clr-grey-light));
+  display: inline-block;
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 0.85rem;
+  padding-top: 0.8rem;
+  border-radius: 50%;
+  border: none;
+  width: 3.25rem;
+  height: 3.25rem;
+  fill: hsl(var(--clr-dark-grey-blue));
+  z-index: 2;
+  position: relative;
+}
+
+.share-button:hover {
+  background-color: hsl(var(--clr-dark-blue-mellow), 0.5);
+  fill: white;
+}
+
+.active-button {
+  background-color: hsl(var(--clr-dark-blue-mellow));
+  fill: white;
+}
+
+.social-button {
+  display: flex;
+  z-index: 2;
+  position: relative;
+}
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 4rem;
+  padding-block: 3rem;
+  width: 18rem;
+  max-width: 40rem;
+  gap: 1.2rem;
+  background-color: hsl(var(--clr-dark-grey-blue));
+  color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+  bottom: 237%;
+  right: 920%;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 38%;
+  left: 100%;
+  rotate: -90deg;
+  margin-left: -5px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: hsl(var(--clr-dark-grey-blue)) transparent transparent
+    transparent;
+}
+
+.social-icon:hover path {
+  fill: hsl(var(--clr-grey-blue));
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 65em) {
+  .main-card {
+    margin: 2rem;
+    flex-direction: row;
+    max-width: 70rem;
+    max-height: 30.625rem;
+    margin-bottom: 0rem;
+  }
+
+  .main-card > img {
+    border-radius: 15px 0px 0px 15px;
+    min-width: 40%;
+    max-height: 100%;
+  }
+
+  .icon-profile {
+    border-radius: 50%;
+    width: 4rem;
+  }
+
+  .share-button {
+    width: 3rem;
+    height: 3rem;
+    background-position: 14px 11px;
+  }
+
+  article {
+    padding: 2.5rem;
+    padding-right: 4rem;
+  }
+
+  .information {
+    gap: 1rem;
+  }
+
+  .main-text {
+    line-height: 1.45;
+  }
+
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    padding-inline: 4rem;
+    padding-block: 1.5rem;
+    width: 23rem;
+    box-shadow: 1px 4px 8px hsl(var(--clr-dark-grey-blue), 0.4);
+    bottom: 500%;
+    right: 600%;
+  }
+
+  /* Popup arrow */
+  .popup .popuptext::after {
+    top: 100%;
+    left: 50%;
+    rotate: 0deg;
+  }
+}
